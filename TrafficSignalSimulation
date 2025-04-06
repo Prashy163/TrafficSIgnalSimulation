@@ -1,0 +1,38 @@
+package trafficlightSimulation;
+
+class TrafficSignal extends Thread {
+	@Override
+	public void run() {
+		try {
+			System.out.println("--------------Traffic Signal--------------");
+			Thread.sleep(2500);
+
+			for (int i = 0; i < 3; i++) {
+
+				System.out.println("\u001B[33mYellow Light\u001B[0m"); // Yellow
+				Thread.sleep(3000); // 3 seconds
+
+				System.out.println("\u001B[31mRed Light\u001B[0m"); // Red
+				Thread.sleep(5000); // 5 seconds
+
+				System.out.println("\u001B[32mGreen Light\u001B[0m"); // Green
+				Thread.sleep(2000); // 2 seconds
+
+				System.out.println("--- Cycle " + (i + 1) + " complete ---\n");
+				System.out.println("----------------------------");
+
+			}
+
+			System.out.println("Traffic simulation finished.");
+			System.out.println("----------------------------");
+
+		} catch (InterruptedException e) {
+			System.out.println("Thread interrupted: " + e);
+		}
+	}
+
+	public static void main(String[] args) {
+		TrafficSignal signal = new TrafficSignal();
+		signal.start();
+	}
+}
