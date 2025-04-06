@@ -1,5 +1,3 @@
-# TrafficSIgnalSimulation
-
 Overview
 TrafficLightSimulation is a simple Java program that simulates a traffic light system for an intersection. The program runs a basic traffic light cycle (Yellow, Red, Green) using Java threads, with adjustable durations for each light phase. This simulation helps visualize traffic flow management and can be expanded for more complex traffic control systems.
 
